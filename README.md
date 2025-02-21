@@ -8,7 +8,11 @@ import logging
 import os
 
 # Logging setup
-logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
+logging.basicConfig(
+    filename="cymulate_to_splunk.log",  # Log file name
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
 
 # API and Splunk configurations
 CYMULATE_API_URL = "https://api.cymulate.com/v1/logs/activity"
